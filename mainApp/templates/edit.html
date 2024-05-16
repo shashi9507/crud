@@ -1,0 +1,56 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}
+<title>Add | Page</title>
+{% endblock %}
+
+
+{% block body %}
+
+<div class="container-fluid  w-100  my-3">
+    <div class=" w-75 m-auto mid-section">
+        <h5 class="text-center bg-dark text-light p-2"><span style="color: aqua;border-bottom: 5px solid aqua; ">Update</span> Employee Record</h5>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label >Name</label>
+                <input type="text" name="name" placeholder="Enter Name : " class=" form-control " value="{{data.name}}">
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label>Email</label>
+                    <input type="text" name="email" placeholder="Enter Email :" class="form-control" value="{{data.email}}">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label >Phone</label>
+                    <input type="text" name="Phone" placeholder="Enter Phone :" class="form-control"value="{{data.Phone}}">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label>Designation</label>
+                    <input type="text" name="Designation" placeholder="Enter Designation :" class="form-control" value="{{data.Designation}}">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label >Salery</label>
+                    <input type="number" name="Salery" placeholder="Enter Salery :" class="form-control"value="{{data.salery}}">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label>State</label>
+                    <input type="text" name="State" placeholder="Enter State :" class="form-control"value="{{data.state}}">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label >City</label>
+                    <input type="text" name="City" placeholder="Enter City :" class="form-control"value="{{data.city}}">
+                </div>
+            </div>
+            <div class="col-mb-3">
+                <button type="submit" class="bg-dark text-light w-100">submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
